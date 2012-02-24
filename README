@@ -1,0 +1,8 @@
+This is Überity's Twilio DC for Adobe ADEP/LiveCycle 10.0.
+
+To build the package, use Maven.
+
+mvn package will generate a jar that can then be installed within Workbench's "Components" view.
+
+Alternatively, you can download the binary at http://uberity.com/services/livecycle.html
+

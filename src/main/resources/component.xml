@@ -1,0 +1,43 @@
+<component xmlns="http://adobe.com/idp/dsc/component/document">
+    <component-id>com.uberity.livecycle.dsc.twilio</component-id>
+    <version>10.0.0</version>
+    <supported-connectors/>
+    <supports-export>true</supports-export>
+    <services>
+        <service name="uberityTwilioComponent" orchestrateable="true" title="Uberity Twilio Component">
+            <hint>This component utilizes the Twilio SDK to send SMS messages from LiveCycle processes.</hint>
+            <auto-deploy major-version="1" minor-version="0" category-id="Uberity"/>
+            <implementation-class>com.uberity.livecycle.twilio.TwilioSMSSender</implementation-class>
+            <operations>
+                <operation name="sendSMS">
+                    <hint>Returns a boolean on success</hint>
+                    <input-parameter name="sid" title="Twilio SID" type="java.lang.String">
+                        <hint>Enter your Twilio SID</hint>
+                        <supported-expr-types>Literal,XPath,Template,Variable</supported-expr-types>
+                    </input-parameter>
+                    <input-parameter name="auth" title="Twilio AUTH" type="java.lang.String">
+                        <hint>Enter your Twilio AUTH</hint>
+                        <supported-expr-types>Literal,XPath,Template,Variable</supported-expr-types>
+                    </input-parameter>
+                    <input-parameter name="from" title="From Phone Number" type="java.lang.String">
+                        <hint>Enter the phone number that the SMS should originate from.</hint>
+                        <supported-expr-types>Literal,XPath,Template,Variable</supported-expr-types>
+                    </input-parameter>
+                    <input-parameter name="to" title="Recipient Phone Number" type="java.lang.String">
+                        <hint>Enter the phone number that the SMS should be delivered to.</hint>
+                        <supported-expr-types>Literal,XPath,Template,Variable</supported-expr-types>
+                    </input-parameter>
+                    <input-parameter name="message" title="SMS Message" type="java.lang.String">
+                        <hint>The message to send. Keep it short!.=</hint>
+                        <supported-expr-types>Literal,XPath,Template,Variable</supported-expr-types>
+                    </input-parameter>
+                    <output-parameter name="result" title="Result" type="java.lang.Boolean">
+                        <description>true = success, false = failure</description>
+                        <hint>true = good, false = bad :)</hint>
+                    </output-parameter>
+                    <description>Uberity Twilio SMS DSC</description>
+                </operation>
+            </operations>
+        </service>
+    </services>
+</component>

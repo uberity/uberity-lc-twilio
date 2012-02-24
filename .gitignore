@@ -1,0 +1,12 @@
+*.class
+*.dmg
+*.gz
+*.zip
+*.tar
+.DS_Store*
+Thumbs.db
+Icon?
+ehthumbs.db
+.idea/
+target/
+*.iml
